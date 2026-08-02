@@ -41,3 +41,9 @@ section{
     min-height:100vh;
 
 }
+body{
+
+    background:
+    radial-gradient(circle at top left,#0a2030,#06141F 50%);
+
+}
