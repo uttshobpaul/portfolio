@@ -1,0 +1,109 @@
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:120px 8%;
+
+}
+
+.hero-text{
+
+    width:55%;
+
+}
+
+.welcome{
+
+    color:var(--primary);
+
+    font-size:20px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    margin:20px 0;
+
+}
+
+.hero h2{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.description{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+.buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn{
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.secondary{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.hero-image img{
+
+    width:350px;
+
+    border-radius:50%;
+
+    border:6px solid var(--primary);
+
+}

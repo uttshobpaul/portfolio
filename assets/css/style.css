@@ -1,0 +1,43 @@
+:root{
+
+    --bg:#06141F;
+    --card:#0C2233;
+    --primary:#00AEEF;
+    --hover:#3EC5FF;
+    --white:#ffffff;
+    --gray:#B7C7D6;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--white);
+
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+
+    width:100%;
+    min-height:100vh;
+
+}
