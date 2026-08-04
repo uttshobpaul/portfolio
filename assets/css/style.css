@@ -1,11 +1,20 @@
 :root{
 
     --bg:#06141F;
+    --bg-light:#0A1C2B;
+
     --card:#0C2233;
+    --card-hover:#133149;
+
     --primary:#00AEEF;
-    --hover:#3EC5FF;
-    --white:#ffffff;
+    --primary-light:#4CCBFF;
+
+    --white:#FFFFFF;
     --gray:#B7C7D6;
+
+    --shadow:0 15px 45px rgba(0,174,239,.18);
+
+    --radius:22px;
 
 }
 
@@ -45,5 +54,31 @@ body{
 
     background:
     radial-gradient(circle at top left,#0a2030,#06141F 50%);
+
+}
+
+section{
+
+    padding-top:100px;
+
+    padding-bottom:100px;
+
+}
+
+.section-title h2{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.section-title p{
+
+    color:var(--gray);
+
+    font-size:18px;
 
 }

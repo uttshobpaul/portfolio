@@ -132,7 +132,7 @@
 
 .btn{
 
-    padding:16px 35px;
+    padding:16px 36px;
 
     border-radius:50px;
 
@@ -140,23 +140,27 @@
 
     font-weight:600;
 
+    letter-spacing:.5px;
+
 }
 
 .primary{
 
-    background:#00AEEF;
+    background:linear-gradient(
+        135deg,
+        #00AEEF,
+        #3EC5FF
+    );
 
     color:white;
 
-    box-shadow:0 0 25px rgba(0,174,239,.5);
+    box-shadow:0 10px 30px rgba(0,174,239,.35);
 
 }
 
 .primary:hover{
 
-    transform:translateY(-6px);
-
-    box-shadow:0 0 45px rgba(0,174,239,.9);
+    transform:translateY(-6px) scale(1.03);
 
 }
 

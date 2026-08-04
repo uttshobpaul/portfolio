@@ -1,21 +1,21 @@
-@keyframes floatImage{
+/* Hidden State */
 
-    0%{
+.hidden{
 
-        transform:translateY(0px);
+    opacity:0;
 
-    }
+    transform:translateY(80px);
 
-    50%{
+    transition:all .8s ease;
 
-        transform:translateY(-20px);
+}
 
-    }
+/* Visible State */
 
-    100%{
+.show{
 
-        transform:translateY(0px);
+    opacity:1;
 
-    }
+    transform:translateY(0);
 
 }
