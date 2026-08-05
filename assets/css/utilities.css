@@ -1,0 +1,30 @@
+/* ========= Layout ========= */
+
+.container{
+
+    width:min(1200px,92%);
+    margin-inline:auto;
+
+}
+
+/* ========= Text ========= */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/* ========= Margin ========= */
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}

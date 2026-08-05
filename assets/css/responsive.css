@@ -1,72 +1,47 @@
-@media(max-width:900px){
+@media (max-width:900px){
 
-    .hero{
-
-        flex-direction:column-reverse;
-
-        justify-content:center;
-
-        text-align:center;
-
-        gap:50px;
-
-    }
-
-    .hero-text{
-
-        width:100%;
-
-    }
-
-    .description{
-
-        width:100%;
-
-    }
-
-    .hero-image img{
-
-        width:260px;
-
-    }
-
-    .nav-links{
-
-        display:none;
-
-    }
-
-    .menu-toggle{
-
-        display:block;
-
-    }
-
-}
-.about-container{
+.hero-container{
 
     grid-template-columns:1fr;
 
-}
-
-.about-cards{
-
-    grid-template-columns:1fr;
-
-}
-.skills-grid{
-
-    grid-template-columns:1fr;
-
-}
-.project-card{
-
-    grid-template-columns:1fr;
+    text-align:center;
 
 }
 
-.project-image{
+.hero-image{
 
-    height:220px;
+    order:-1;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.social-links{
+
+    justify-content:center;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+}
+
+}
+
+.timeline::before{
+
+    left:15px;
+
+}
+
+.timeline-item{
+
+    padding-left:55px;
 
 }

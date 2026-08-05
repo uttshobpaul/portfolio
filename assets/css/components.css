@@ -1,0 +1,55 @@
+/* ===========================
+   BUTTON COMPONENT
+=========================== */
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:16px 36px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:all .3s ease;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,#00AEEF,#3EC5FF);
+
+    color:#fff;
+
+    box-shadow:0 10px 30px rgba(0,174,239,.35);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}

@@ -23,17 +23,17 @@
     <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <script src="assets/js/skills.js"></script>
+    <link rel="stylesheet" href="assets/css/experience.css">
 </head>
 
 <body>
 
 <header>
-
     <nav class="navbar">
-
-        <div class="logo">
-            UP
-        </div>
+        <a href="#home" class="logo">UP</a>
 
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -42,203 +42,288 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="menu-toggle" id="menuToggle">
 
-         ☰
-
-        </div>
-
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+            ☰
+        </button>
     </nav>
-
 </header>
 
-<section id="home" class="hero hidden">
+<main>
 
-    <div class="hero-text">
+    <!-- Hero Section Here -->
+     <section id="home" class="hero">
 
-        <p class="welcome">👋 Hello, I'm</p>
+    <div class="container hero-container">
 
-        <h1>Uttshob Paul</h1>
+        <div class="hero-content">
 
-        <h2>
-            <span id="typing"></span>
-        </h2>
-
-        <p class="description">
-            A Computer Science student passionate about Java, Backend Development,
-            Spring Boot and building real-world software.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#" class="btn primary">
-                Download Resume
-            </a>
-
-            <a href="#contact" class="btn secondary">
-                Contact Me
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-
-        <img src="assets/images/profile.png" alt="Profile">
-
-    </div>
-
-</section>
-<section id="about" class="about hidden">
-
-    <div class="section-title">
-        <h2>About Me</h2>
-        <p>Get to know me better.</p>
-    </div>
-
-    <div class="about-container">
-
-        <div class="about-text">
-
-            <h3>Future Java Backend Developer</h3>
-
-            <p>
-                Hello! I'm Uttshob Paul, a Computer Science student passionate about
-                software development. I'm currently building a strong foundation in Core Java
-                and working toward becoming a professional Java Backend Developer.
+            <p class="hero-greeting">
+                👋 Hello, I'm
             </p>
 
-            <p>
-                I enjoy learning new technologies, solving programming problems, and building
-                projects that help me improve my practical skills. My long-term goal is to
-                create secure, scalable, and high-quality backend applications.
+            <h1>
+                Uttshob Paul
+            </h1>
+
+            <h2>
+                <span id="typing"></span>
+            </h2>
+
+            <p class="hero-description">
+
+                Computer Science Engineering student passionate about Java,
+                Backend Development, Spring Boot and building secure,
+                scalable applications.
+
             </p>
 
+            <div class="hero-buttons">
+
+                <a href="assets/resume/resume.pdf"
+                   class="btn btn-primary">
+
+                    Download Resume
+
+                </a>
+
+                <a href="#contact"
+                   class="btn btn-outline">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="#" aria-label="GitHub">
+                    GitHub
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    LinkedIn
+                </a>
+
+                <a href="#" aria-label="Email">
+                    Email
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="about-cards">
+        <div class="hero-image">
 
-            <div class="card">
-                <h3>🎓 Education</h3>
-                <p>B.Tech in Computer Science & Engineering</p>
-            </div>
+            <img
+                src="assets/images/profile.png"
+                alt="Portrait of Uttshob Paul">
 
-            <div class="card">
-                <h3>☕ Learning</h3>
-                <p>Core Java, OOP, DSA and Spring Boot</p>
-            </div>
-
-            <div class="card">
-                <h3>💻 Goal</h3>
-                <p>Become a Java Backend Developer</p>
-            </div>
-
-            <div class="card">
-                <h3>🚀 Mindset</h3>
-                <p>Learn continuously and build real-world projects.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section id="skills" class="skills hidden">
-
-    <div class="section-title">
-        <h2>Skills</h2>
-        <p>Technologies I'm learning and using.</p>
-    </div>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-            <h3>☕ Java</h3>
-            <p>Core Java, OOP, Collections</p>
-
-            <div class="progress">
-                <div class="progress-bar java"></div>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <h3>🌱 Spring Boot</h3>
-            <p>Backend Development</p>
-
-            <div class="progress">
-                <div class="progress-bar spring"></div>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <h3>🛢 MySQL</h3>
-            <p>Database Management</p>
-
-            <div class="progress">
-                <div class="progress-bar mysql"></div>
-            </div>
-        </div>
-
-        <div class="skill-card">
-            <h3>🌐 HTML • CSS • JavaScript</h3>
-            <p>Frontend Development</p>
-
-            <div class="progress">
-                <div class="progress-bar frontend"></div>
-            </div>
         </div>
 
     </div>
 
 </section>
 
-<section id="projects" class="projects hidden">
+    <!-- About -->
 
-    <div class="section-title">
-        <h2>Featured Projects</h2>
-        <p>Projects that demonstrate my learning journey.</p>
-    </div>
+    <!-- Skills -->
+     <section id="skills" class="skills">
 
-    <div class="projects-grid">
+    <div class="container">
 
-        <article class="project-card">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p>Technologies I use and currently learning.</p>
+        </div>
 
-            <div class="project-image">
-                Portfolio Website
-            </div>
+        <div class="skills-category">
 
-            <div class="project-content">
+            <h3>Programming Languages</h3>
 
-                <h3>BluePortfolio</h3>
+            <div class="skills-grid">
 
-                <p>
-                    A premium responsive developer portfolio built with
-                    HTML, CSS and JavaScript. This project will later be
-                    integrated with Java Spring Boot.
-                </p>
+                <div class="skill-card">
+                    <h4>☕ Java</h4>
+                    <p>Core Java, OOP, Collections</p>
 
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-width="80"></div>
+                    </div>
                 </div>
 
-                <div class="project-buttons">
+                <div class="skill-card">
+                    <h4>C</h4>
+                    <p>Programming Fundamentals</p>
 
-                    <a href="#" class="btn primary">Live Demo</a>
+                    <div class="progress">
+                        <div class="progress-bar" data-width="70"></div>
+                    </div>
+                </div>
 
-                    <a href="#" class="btn secondary">GitHub</a>
+                <div class="skill-card">
+                    <h4>C++</h4>
+                    <p>Object-Oriented Programming</p>
 
+                    <div class="progress">
+                        <div class="progress-bar" data-width="70"></div>
+                    </div>
                 </div>
 
             </div>
 
-        </article>
+        </div>
+
+        <div class="skills-category">
+
+            <h3>Web Development</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h4>HTML</h4>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-width="75"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h4>CSS</h4>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-width="70"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h4>JavaScript</h4>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-width="55"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="skills-category">
+
+            <h3>Backend & Database</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h4>Spring Boot</h4>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-width="25"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h4>MySQL</h4>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-width="60"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Git & GitHub</h4>
+
+                    <div class="progress">
+                        <div class="progress-bar" data-width="65"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
+
+    
+    
+    <!-- Projects -->
+
+
+    <!--experience -->
+    <section id="experience" class="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Learning Journey</h2>
+            <p>My path toward becoming a Java Backend Developer.</p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>2025</span>
+                    <h3>Started Programming</h3>
+                    <p>Began learning C and programming fundamentals.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>2025</span>
+                    <h3>Object-Oriented Programming</h3>
+                    <p>Learned C++ and OOP concepts.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>2026</span>
+                    <h3>Core Java</h3>
+                    <p>Learning Java, OOP, Collections and DSA.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>Next</span>
+                    <h3>Spring Boot</h3>
+                    <p>Building REST APIs and backend applications.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>Goal</span>
+                    <h3>Java Backend Developer</h3>
+                    <p>Build scalable and secure enterprise applications.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</main>
+
+<footer>
+
+</footer>
 
 <script src="assets/js/typing.js"></script>
 <script src="assets/js/script.js"></script>
