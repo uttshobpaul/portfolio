@@ -14,11 +14,46 @@
 
     font-weight:600;
 
-    transition:all .3s ease;
-
     cursor:pointer;
 
     text-decoration:none;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.4s;
+
+}
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
 
 }
 
@@ -51,5 +86,108 @@
     background:var(--primary);
 
     color:white;
+
+}
+
+/* ===========================
+   Scroll Progress Bar
+=========================== */
+
+#progress-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:linear-gradient(90deg,#00AEEF,#3EC5FF);
+
+    z-index:9999;
+
+    transition:width .1s linear;
+
+}
+#scrollTopBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#00AEEF;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:0 10px 25px rgba(0,174,239,.35);
+
+    transition:.3s;
+
+}
+
+#scrollTopBtn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.4s;
+
+}
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
 
 }

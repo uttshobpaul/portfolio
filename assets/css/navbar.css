@@ -87,3 +87,56 @@
     cursor:pointer;
 
 }
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+}

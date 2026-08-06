@@ -1,0 +1,46 @@
+/* ==========================================
+   LIGHT THEME (Default)
+========================================== */
+
+:root{
+
+    --primary:#00AEEF;
+    --primary-light:#3EC5FF;
+
+    --background:#F7FAFC;
+
+    --surface:#FFFFFF;
+
+    --surface-2:#EEF5FA;
+
+    --text:#0F172A;
+
+    --text-secondary:#475569;
+
+    --border:#D9E2EC;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   DARK THEME
+========================================== */
+
+body.dark{
+
+    --background:#041018;
+
+    --surface:#0C2233;
+
+    --surface-2:#16384D;
+
+    --text:#FFFFFF;
+
+    --text-secondary:#C7D2DA;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 15px 40px rgba(0,0,0,.45);
+
+}
