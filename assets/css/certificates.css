@@ -1,0 +1,32 @@
+.certificates{
+    padding:100px 0;
+}
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:60px;
+}
+
+.certificate-card{
+    background:rgba(12,34,51,.75);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-8px);
+}
+
+.certificate-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.certificate-card p{
+    color:var(--gray);
+}

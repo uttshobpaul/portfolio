@@ -1,0 +1,59 @@
+.education{
+
+    padding:100px 0;
+
+}
+
+.education-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.education-card{
+
+    background:rgba(12,34,51,.75);
+
+    backdrop-filter:blur(12px);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.education-card span{
+
+    display:inline-block;
+
+    margin:15px 0;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.education-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}

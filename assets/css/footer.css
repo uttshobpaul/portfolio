@@ -1,0 +1,15 @@
+.footer{
+
+    padding:35px 0;
+
+    background:#041018;
+
+    text-align:center;
+
+}
+
+.footer p{
+
+    color:var(--gray);
+
+}
