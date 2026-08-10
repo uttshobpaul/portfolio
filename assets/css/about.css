@@ -1,6 +1,8 @@
 .about{
+
     padding:100px 8%;
-    background:var(--surface-2);
+
+    background:transparent;
 }
 
 .section-title{
@@ -82,4 +84,76 @@
 
 .card p{
     color:var(--text-secondary);
+}
+
+/* ==========================================
+   ABOUT SECTION - MOBILE RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px){
+
+    .about{
+
+        padding:80px 20px;
+
+        width:100%;
+
+    }
+
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .about-text{
+
+        width:100%;
+
+    }
+
+
+    .about-text h3{
+
+        font-size:30px;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .about-text p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .about-cards{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+        width:100%;
+
+    }
+
+
+    .card{
+
+        width:100%;
+
+        padding:24px;
+
+    }
+
 }

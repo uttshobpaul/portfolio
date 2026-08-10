@@ -103,3 +103,53 @@ box-shadow:0 20px 40px rgba(0,174,239,.20);
     gap:18px;
 
 }
+
+/* ==========================================
+   PROJECTS - MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 900px){
+
+    .projects{
+        padding:80px 20px;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+        margin-top:40px;
+    }
+
+    .project-card{
+        grid-template-columns:1fr;
+        width:100%;
+    }
+
+    .project-image{
+        min-height:180px;
+        padding:30px;
+    }
+
+    .project-content{
+        padding:25px;
+    }
+
+    .project-content h3{
+        font-size:24px;
+        margin-bottom:15px;
+    }
+
+    .project-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .project-tags{
+        margin:20px 0;
+    }
+
+    .project-buttons{
+        flex-wrap:wrap;
+    }
+
+}
