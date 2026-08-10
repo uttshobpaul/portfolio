@@ -15,25 +15,15 @@
 }
 
 .project-card{
-
     display:grid;
-
     grid-template-columns:320px 1fr;
-
-    background:rgba(12,34,51,.75);
-
+    background:var(--surface);
     backdrop-filter:blur(16px);
-
     border-radius:22px;
-
     overflow:hidden;
-
-    border:1px solid rgba(255,255,255,.08);
-
+    border:1px solid var(--border);
     box-shadow:var(--shadow);
-
     transition:.35s;
-
 }
 
 .project-card:hover{
@@ -76,10 +66,9 @@ box-shadow:0 20px 40px rgba(0,174,239,.20);
 
 .project-content p{
 
-    color:var(--gray);
+    color:var(--text-secondary);
 
     line-height:1.8;
-
 }
 
 .project-tags{
@@ -96,16 +85,15 @@ box-shadow:0 20px 40px rgba(0,174,239,.20);
 
 .project-tags span{
 
-    background:#143247;
+    background:var(--surface-2);
 
-    color:#3EC5FF;
+    color:var(--primary-light);
 
     padding:8px 16px;
 
     border-radius:30px;
 
     font-size:14px;
-
 }
 
 .project-buttons{

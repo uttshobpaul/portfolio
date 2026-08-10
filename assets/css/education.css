@@ -18,7 +18,7 @@
 
 .education-card{
 
-    background:rgba(12,34,51,.75);
+    background:var(--surface);
 
     backdrop-filter:blur(12px);
 
@@ -26,10 +26,11 @@
 
     border-radius:20px;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
 
     transition:.35s;
 
+    box-shadow:var(--shadow);
 }
 
 .education-card:hover{
@@ -54,8 +55,7 @@ box-shadow:0 20px 40px rgba(0,174,239,.20);
 
 .education-card p{
 
-    color:var(--gray);
+    color:var(--text-secondary);
 
     line-height:1.8;
-
 }

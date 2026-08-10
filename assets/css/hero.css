@@ -38,12 +38,11 @@
 
 .hero-description{
 
-    color:var(--gray);
+    color:var(--text-secondary);
 
     line-height:1.9;
 
     max-width:650px;
-
 }
 
 .hero-buttons{
@@ -70,10 +69,9 @@
 
 .social-links a{
 
-    color:var(--gray);
+    color:var(--text-secondary);
 
     transition:.3s;
-
 }
 
 .social-links a:hover{

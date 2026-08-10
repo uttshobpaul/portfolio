@@ -14,35 +14,26 @@ window.addEventListener("scroll", () => {
 
 // Mobile Menu
 
-menuToggle.addEventListener("click",()=>{
+menuToggle.addEventListener("click", () => {
 
-    if(navLinks.style.display==="flex"){
-
-        navLinks.style.display="none";
-
-    }else{
-
-        navLinks.style.display="flex";
-
-        navLinks.style.flexDirection="column";
-
-        navLinks.style.position="absolute";
-
-        navLinks.style.top="80px";
-
-        navLinks.style.right="8%";
-
-        navLinks.style.padding="20px";
-
-        navLinks.style.background="#0C2233";
-
-        navLinks.style.borderRadius="12px";
-
-        navLinks.style.gap="18px";
-
-    }
+    navLinks.classList.toggle("mobile-open");
 
 });
+
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("mobile-open");
+
+    });
+
+});
+
+
 
 // Scroll Reveal
 

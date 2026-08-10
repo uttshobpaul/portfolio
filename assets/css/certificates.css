@@ -10,12 +10,13 @@
 }
 
 .certificate-card{
-    background:rgba(12,34,51,.75);
+    background:var(--surface);
     backdrop-filter:blur(12px);
     border-radius:20px;
     padding:30px;
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
     transition:.3s;
+    box-shadow:var(--shadow);
 }
 
 .certificate-card:hover{
@@ -30,5 +31,5 @@ box-shadow:0 20px 40px rgba(0,174,239,.20);
 }
 
 .certificate-card p{
-    color:var(--gray);
+    color:var(--text-secondary);
 }

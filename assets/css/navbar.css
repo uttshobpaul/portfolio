@@ -1,31 +1,18 @@
 .navbar{
-
     width:100%;
-
     height:80px;
-
     padding:0 8%;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     backdrop-filter:blur(18px);
 
-    background:rgba(6,20,31,.75);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
+    background:color-mix(in srgb, var(--surface) 80%, transparent);
+    border-bottom:1px solid var(--border);
 }
-
 .logo{
 
     font-size:30px;
@@ -45,12 +32,10 @@
 }
 
 .nav-links a{
-
-    color:white;
-
+    color:var(--text);
     transition:.3s;
-
 }
+
 
 .nav-links a:hover{
 
@@ -69,11 +54,11 @@
 
 .navbar.scrolled{
 
-    background:rgba(11, 31, 47, 0.95);
+    background:color-mix(in srgb, var(--surface) 95%, transparent);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.25);
-
+    box-shadow:var(--shadow);
 }
+
 /* Mobile Menu Icon */
 
 .menu-toggle{
@@ -82,10 +67,9 @@
 
     font-size:30px;
 
-    color:rgb(9, 165, 243);
+    color:var(--primary);
 
     cursor:pointer;
-
 }
 
 .nav-links a.active{
@@ -102,10 +86,9 @@ html{
 
 .nav-links a{
 
-    position:relative;
+    color:var(--text);
 
     transition:.3s;
-
 }
 
 .nav-links a::after{
@@ -140,3 +123,83 @@ html{
     color:var(--primary);
 
 }
+
+/* ==========================================
+   THEME TOGGLE
+========================================== */
+
+.theme-toggle{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid var(--border);
+
+    border-radius:50%;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.theme-toggle:hover{
+
+    transform:translateY(-3px) rotate(10deg);
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+    box-shadow:0 8px 25px rgba(0,174,239,.18);
+}
+ 
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin:0;
+}
+
+.theme-toggle{
+
+    flex-shrink:0;
+}
+
+.menu-toggle{
+
+    flex-shrink:0;
+}
+
+  
