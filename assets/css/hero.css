@@ -87,3 +87,25 @@
     justify-content:center;
 
 }
+
+.hero-image img{
+    width:320px;
+    height:360px;
+    object-fit:cover;
+    border-radius:24px;
+    display:block;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+
+
+@media (max-width:900px){
+
+    .hero-image img{
+        width:200px;
+        height:auto;
+        object-fit:contain;
+    }
+
+}
