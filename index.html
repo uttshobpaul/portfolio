@@ -602,26 +602,216 @@
             <p>Courses and certifications that support my learning journey.</p>
         </div>
 
-        <div class="certificate-grid">
+        <div class="certificate-carousel">
 
-            <div class="certificate-card">
-                <h3>Core Java</h3>
-                <p>Currently Learning</p>
-            </div>
+            <button
+            class="certificate-arrow certificate-arrow-left"
+            id="certificatePrev"
+            type="button"
+            aria-label="Previous certificates"
+    >
+        ←
+    </button>
 
-            <div class="certificate-card">
-                <h3>Data Structures</h3>
-                <p>Planned</p>
-            </div>
+    <div class="certificate-grid">
 
-            <div class="certificate-card">
-                <h3>Spring Boot</h3>
-                <p>Future Certification</p>
-            </div>
+    <!-- EDUSKILL python full stack-->
+        <!-- =========================================
+        CERTIFICATE 01
+        EduSkills - Python Full Stack Developer
+        ========================================= -->
+
+<a
+    href="assets/certificates/eduskill-python-fullstack-internship.pdf"
+    class="certificate-card certificate-link"
+    data-certificate
+>
+
+    <p class="certificate-label">
+        EduSkills Virtual Internship
+    </p>
+
+    <h3>
+        Python Full Stack Developer
+    </h3>
+
+    <p class="certificate-description">
+
+        Presented to <strong>Uttshob Paul</strong> for successfully
+        completing a 10-week Python Full Stack Developer Virtual
+        Internship during January – March 2026.
+
+    </p>
+
+    <h4>
+        Skills & Technologies
+    </h4>
+
+    <ul class="certificate-skills">
+
+        <li>HTML – Foundations of Web Development</li>
+
+        <li>CSS & Bootstrap – Responsive Web Design</li>
+
+        <li>JavaScript – Fundamentals & DOM Manipulation</li>
+
+        <li>jQuery – Simplifying JavaScript Development</li>
+
+        <li>Python – Programming Fundamentals & Applications</li>
+
+        <li>Django – Building Web Applications</li>
+
+        <li>SQL – Database Querying & Management</li>
+
+        <li>Git & Version Control</li>
+
+    </ul>
+
+    <div class="certificate-meta">
+
+        <span>
+            Issued: Mar 04, 2026
+        </span>
+
+        <span>
+            Certificate ID: 2026-293BDEA5F1
+        </span>
+
+    </div>
+
+    <div class="certificate-view">
+
+        View Certificate <span>↗</span>
+
+    </div>
+
+</a>
+
+    <!-- TATA genai certificates -->
+<a
+    href="assets/certificates/tata-genAi-dataAnalytics.pdf"
+    class="certificate-card certificate-link"
+>
+    <p class="certificate-label">
+        Froage
+    </p>
+    <h3>
+        GenAI PoweredData Analytics	Job	Simulation
+    </h3>
+    <p class="certificate-description">
+        Exploratory	data	analysis	and	risk	profiling
+        Predicting	delinquency	with	AI
+    </p>
+    <h4>
+        Skills & Technologies
+    </h4>
+    <ul class="certificate-skills">
+        <li>Skill / Technology 1</li>
+        <li>Skill / Technology 2</li>
+        <li>Skill / Technology 3</li>
+        <li>Skill / Technology 4</li>
+
+    </ul>
+    <div class="certificate-meta">
+        <span>
+            Issued: August 8th, 2025
+        </span>
+        <!-- <span>
+            Certificate ID: YOUR-CERTIFICATE-ID
+        </span> -->
+    </div>
+    <div class="certificate-view">
+        View Certificate <span>↗</span>
+    </div>
+</a>
+
+ 
+            <!-- =========================================
+            FUTURE CERTIFICATE TEMPLATE
+     
+            HOW TO ADD A NEW CERTIFICATE:
+     
+            1. Copy this entire block.
+            2. Paste it inside .certificate-grid
+            3. Remove the HTML comments: 
+            4. Change the certificate information.
+            5. Put the PDF inside:
+        
+            assets/certificates/
+     
+            6. Change the PDF filename in href.
+            ========================================= -->
+<!--
+
+<a
+    href="assets/certificates/your-certificate-file.pdf"
+    class="certificate-card certificate-link"
+>
+
+    <p class="certificate-label">
+        Organization Name
+    </p>
+
+    <h3>
+        Certificate Name
+    </h3>
+
+    <p class="certificate-description">
+
+        Short description of the certificate,
+        course, internship or achievement.
+
+    </p>
+
+    <h4>
+        Skills & Technologies
+    </h4>
+
+    <ul class="certificate-skills">
+
+        <li>Skill / Technology 1</li>
+        <li>Skill / Technology 2</li>
+        <li>Skill / Technology 3</li>
+        <li>Skill / Technology 4</li>
+
+    </ul>
+
+    <div class="certificate-meta">
+
+        <span>
+            Issued: Month DD, YYYY
+        </span>
+
+        <span>
+            Certificate ID: YOUR-CERTIFICATE-ID
+        </span>
+
+    </div>
+
+    <div class="certificate-view">
+
+        View Certificate <span>↗</span>
+
+    </div>
+
+</a>
+
+-->
 
         </div>
 
+        <button
+        class="certificate-arrow certificate-arrow-right"
+        id="certificateNext"
+        type="button"
+        aria-label="Next certificates"
+    >
+        →
+    </button>
+
     </div>
+
+    
 
 </section>
 
@@ -804,6 +994,8 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/topButton.js"></script>
 <script src="assets/js/typing.js"></script>
+<!-- Certificate Carousel -->
+<script src="assets/js/certificates.js"></script>
 
 
 

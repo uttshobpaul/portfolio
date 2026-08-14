@@ -2,14 +2,34 @@
     padding:100px 0;
 }
 
+/* ==========================================
+   CERTIFICATE HORIZONTAL CAROUSEL
+========================================== */
 .certificate-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    display:flex;
     gap:25px;
     margin-top:60px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
+    padding:10px 5px 25px;
+    /* Prevent cards from wrapping */
+    flex-wrap:nowrap;
+    /* Smooth touch scrolling on mobile */
+    -webkit-overflow-scrolling:touch;
+    /* Hide scrollbar */
+    scrollbar-width:none;
+}
+/* Hide scrollbar - Chrome, Edge, Safari */
+.certificate-grid::-webkit-scrollbar{
+    display:none;
 }
 
 .certificate-card{
+    /* Fixed responsive card width */
+    flex:0 0 360px;
+    width:360px;
     background:var(--surface);
     backdrop-filter:blur(12px);
     border-radius:20px;
@@ -17,6 +37,8 @@
     border:1px solid var(--border);
     transition:.3s;
     box-shadow:var(--shadow);
+    /* Each card snaps into position */
+    scroll-snap-align:start;
 }
 
 .certificate-card:hover{
@@ -32,4 +54,227 @@ box-shadow:0 20px 40px rgba(0,174,239,.20);
 
 .certificate-card p{
     color:var(--text-secondary);
+}
+
+/* ==========================================
+   CERTIFICATE CONTENT
+========================================== */
+
+.certificate-link{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    cursor:pointer;
+}
+
+
+.certificate-label{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    margin-bottom:10px;
+}
+
+
+.certificate-description{
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+}
+
+
+.certificate-card h4{
+
+    color:var(--text);
+
+    margin-bottom:12px;
+}
+
+
+.certificate-skills{
+
+    list-style:disc;
+
+    padding-left:20px;
+
+    margin-bottom:25px;
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+}
+
+
+.certificate-skills li{
+
+    margin-bottom:5px;
+}
+
+
+.certificate-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    color:var(--text-secondary);
+
+    font-size:13px;
+
+    margin-bottom:25px;
+}
+
+
+.certificate-view{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+
+.certificate-link:hover .certificate-view{
+
+    gap:14px;
+}
+
+/* ==========================================
+   MOBILE CERTIFICATE CAROUSEL
+========================================== */
+
+@media (max-width:600px){
+    .certificate-grid{
+        gap:18px;
+        padding-left:8px;
+        padding-right:8px;
+
+    }
+    .certificate-card{
+        /*
+         * Almost the entire mobile screen,
+         * leaving a small part of the next
+         * card visible to indicate scrolling.
+         */
+        flex:0 0 88%;
+        width:88%;
+        padding:25px;
+    }
+}
+
+/* ==========================================
+   CERTIFICATE DESKTOP CAROUSEL
+========================================== */
+
+.certificate-carousel{
+
+    position:relative;
+
+    width:100%;
+
+    margin-top:60px;
+
+}
+
+
+/* ==========================================
+   DESKTOP ARROW BUTTONS
+========================================== */
+
+.certificate-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background:var(--surface);
+
+    color:var(--primary);
+
+    font-size:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:10;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s ease;
+}
+
+
+.certificate-arrow:hover{
+
+    background:var(--primary);
+
+    color:var(--surface);
+
+    transform:translateY(-50%) scale(1.08);
+}
+
+
+.certificate-arrow-left{
+
+    left:-20px;
+}
+
+
+.certificate-arrow-right{
+
+    right:-20px;
+}
+
+/* ==========================================
+   MOBILE
+   Hide arrows - use touch/swipe instead
+========================================== */
+
+@media (max-width:900px){
+
+    .certificate-arrow{
+
+        display:none;
+
+    }
+
 }
