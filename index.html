@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+     
     <!-- CSS -->
 <link rel="stylesheet" href="assets/css/variables.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -65,9 +65,11 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -190,93 +192,82 @@
 
 
 <!-- ========================================= -->
-
 <!-- ABOUT SECTION -->
-
 <!-- ========================================= -->
 
 <section id="about" class="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know me and my journey</p>
+        </div>
 
 
-<div class="container">
+        <div class="about-container">
 
-    <div class="section-title">
-        <h2>About Me</h2>
-        <p>Get to know me and my journey</p>
-    </div>
+            <!-- About Text -->
 
-
-    <div class="about-container">
-
-        <!-- About Text -->
-
-        <div class="about-text">
-
-            <h3>I'm Uttshob Paul</h3>
-
-            <p>
+            <div class="about-text">
+                <h3>I'm Uttshob Paul</h3>
+                <p>
                 I am a Computer Science and Engineering student
                 passionate about programming, software development
                 and backend technologies.
-            </p>
-
-            <p>
+                </p>
+                <p>
                 Currently, I am focusing on Core Java, Object-Oriented
                 Programming, Data Structures, SQL and backend development.
                 My goal is to build reliable, scalable and secure
                 applications.
-            </p>
-
-            <p>
+                </p>
+                <p>
                 I enjoy learning new technologies, solving programming
                 problems and turning ideas into practical projects.
                 I am continuously working on improving my technical
                 skills and becoming a professional Java Backend Developer.
-            </p>
+                </p>
+            </div>
 
-        </div>
+            <!-- About Cards -->
 
+            <div class="about-cards">
 
-        <!-- About Cards -->
-
-        <div class="about-cards">
-
-            <div class="card">
-                <h3>🎓 Education</h3>
-                <p>
+                <div class="card">
+                    <h3>🎓 Education</h3>
+                    <p>
                     B.Tech in Computer Science & Engineering
-                </p>
-            </div>
+                    </p>
+                </div>
 
 
-            <div class="card">
-                <h3>☕ Primary Focus</h3>
-                <p>
+                <div class="card">
+                    <h3>☕ Primary Focus</h3>
+                    <p>
                     Java & Backend Development
-                </p>
-            </div>
+                    </p>
+                </div>
 
 
-            <div class="card">
-                <h3>💻 Currently Learning</h3>
-                <p>
+                <div class="card">
+                    <h3>💻 Currently Learning</h3>
+                    <p>
                     Core Java, DSA, SQL, REST APIs and Spring Boot
-                </p>
-            </div>
+                    </p>
+                </div>
 
 
-            <div class="card">
-                <h3>🚀 Career Goal</h3>
-                <p>
+                <div class="card">
+                    <h3>🚀 Career Goal</h3>
+                    <p>
                     Become a skilled Java Backend Developer
-                </p>
+                    </p>
+                </div>
+
             </div>
 
         </div>
 
     </div>
-
-</div>
 
 
 </section>
@@ -486,94 +477,279 @@
     <div class="container">
 
         <div class="section-title">
+
             <h2>My Projects</h2>
-            <p>Some of the projects I have worked on and continue to build.</p>
+
+            <p>
+                Some of the projects I have worked on and continue to build.
+            </p>
+
         </div>
 
-        <div class="projects-grid">
 
-            <!-- Project 1 -->
-            <div class="project-card">
+        <!-- ========================================= -->
+        <!-- PROJECT CAROUSEL -->
+        <!-- ========================================= -->
 
-                <div class="project-image">
-                    Java Backend
-                </div>
+        <div class="projects-carousel">
 
-                <div class="project-content">
 
-                    <h3>Java Backend Project</h3>
+            <!-- Previous Button -->
 
-                    <p>
-                        A backend application built while learning
-                        Java, OOP, database connectivity and REST API
-                        development.
-                    </p>
+            <button
+                class="project-arrow project-arrow-left"
+                id="projectPrev"
+                type="button"
+                aria-label="Previous project"
+            >
+                ←
+            </button>
 
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>SQL</span>
-                        <span>REST API</span>
+
+            <!-- ========================================= -->
+            <!-- PROJECT SLIDER -->
+            <!-- ========================================= -->
+
+            <div class="projects-track">
+
+
+                <!-- ========================================= -->
+                <!-- PROJECT 1 -->
+                <!-- ========================================= -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        Java Backend
                     </div>
 
-                </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Java Backend Project
+                        </h3>
+
+
+                        <p>
+                            A backend application built while learning
+                            Java, OOP, database connectivity and REST API
+                            development.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Java</span>
+
+                            <span>SQL</span>
+
+                            <span>REST API</span>
+
+                        </div>
+
+
+                        <!-- Future GitHub button -->
+
+                        <div class="project-buttons">
+
+                            <!--
+                            <a
+                                href="YOUR_GITHUB_LINK"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline"
+                            >
+                                GitHub
+                            </a>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ========================================= -->
+                <!-- PROJECT 2 -->
+                <!-- ========================================= -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        Healthcare
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <h3>
+                            Arogya-Sakhi
+                        </h3>
+
+
+                        <p>
+                            A healthcare-focused project designed to provide
+                            useful healthcare services and assistance through
+                            a single platform.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Healthcare</span>
+
+                            <span>Web</span>
+
+                            <span>AI</span>
+
+                        </div>
+
+
+                        <div class="project-buttons">
+
+                            <!--
+                            <a
+                                href="YOUR_GITHUB_LINK"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline"
+                            >
+                                GitHub
+                            </a>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ========================================= -->
+                <!-- PROJECT 3 -->
+                <!-- ========================================= -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        Portfolio
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <h3>
+                            Personal Portfolio
+                        </h3>
+
+
+                        <p>
+                            A responsive personal portfolio website created
+                            to showcase my skills, projects, education and
+                            journey as a developer.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>HTML</span>
+
+                            <span>CSS</span>
+
+                            <span>JavaScript</span>
+
+                        </div>
+
+
+                        <div class="project-buttons">
+
+                            <!--
+                            <a
+                                href="YOUR_GITHUB_LINK"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline"
+                            >
+                                GitHub
+                            </a>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ========================================= -->
+                <!-- FUTURE PROJECT TEMPLATE -->
+                <!-- ========================================= -->
+
+                <!--
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        Project Category
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Project Name
+                        </h3>
+
+                        <p>
+                            Short description of the project,
+                            its purpose and the main functionality.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Technology 1</span>
+                            <span>Technology 2</span>
+                            <span>Technology 3</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a
+                                href="YOUR_GITHUB_LINK"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline"
+                            >
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                -->
+
 
             </div>
 
 
-            <!-- Project 2 -->
-            <div class="project-card">
+            <!-- Next Button -->
 
-                <div class="project-image">
-                    Healthcare
-                </div>
+            <button
+                class="project-arrow project-arrow-right"
+                id="projectNext"
+                type="button"
+                aria-label="Next project"
+            >
+                →
+            </button>
 
-                <div class="project-content">
-
-                    <h3>Arogya-Sakhi</h3>
-
-                    <p>
-                        A healthcare-focused project designed to provide
-                        useful healthcare services and assistance through
-                        a single platform.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Healthcare</span>
-                        <span>Web</span>
-                        <span>AI</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Project 3 -->
-            <div class="project-card">
-
-                <div class="project-image">
-                    Portfolio
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Personal Portfolio</h3>
-
-                    <p>
-                        A responsive personal portfolio website created
-                        to showcase my skills, projects, education and
-                        journey as a developer.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -585,6 +761,77 @@
 
 
 
+
+<!-- ========================================= -->
+<!-- experience SECTION -->
+<!-- ========================================= -->
+
+<section id="experience" class="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Experience (Learning Journey)</h2>
+            <p>My path toward becoming a Java Backend Developer.</p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>2025</span>
+                    <h3>Started Programming</h3>
+                    <p>Began learning C and programming fundamentals.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>2025</span>
+                    <h3>Object-Oriented Programming</h3>
+                    <p>Learned C++ and OOP concepts.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>2026</span>
+                    <h3>Core Java</h3>
+                    <p>Learning Java, OOP, Collections and DSA.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>Next</span>
+                    <h3>Spring Boot</h3>
+                    <p>Building REST APIs and backend applications.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+                    <span>Goal</span>
+                    <h3>Java Backend Developer</h3>
+                    <p>Build scalable and secure enterprise applications.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -818,83 +1065,6 @@
 
 
 
-
-
-<!-- ========================================= -->
-<!-- experience SECTION -->
-<!-- ========================================= -->
-
-<section id="experience" class="experience">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Experience (Learning Journey)</h2>
-            <p>My path toward becoming a Java Backend Developer.</p>
-        </div>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <span>2025</span>
-                    <h3>Started Programming</h3>
-                    <p>Began learning C and programming fundamentals.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <span>2025</span>
-                    <h3>Object-Oriented Programming</h3>
-                    <p>Learned C++ and OOP concepts.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <span>2026</span>
-                    <h3>Core Java</h3>
-                    <p>Learning Java, OOP, Collections and DSA.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <span>Next</span>
-                    <h3>Spring Boot</h3>
-                    <p>Building REST APIs and backend applications.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <span>Goal</span>
-                    <h3>Java Backend Developer</h3>
-                    <p>Build scalable and secure enterprise applications.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-
 <!-- ========================================= -->
 <!-- contact SECTION -->
 <!-- ========================================= -->
@@ -983,7 +1153,6 @@
 
 <!-- JAVA SCRIPTS -->
 
- 
 <script src="assets/js/navigation.js"></script>
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/progress.js"></script>
@@ -996,6 +1165,8 @@
 <script src="assets/js/typing.js"></script>
 <!-- Certificate Carousel -->
 <script src="assets/js/certificates.js"></script>
+<!-- project javascripts  -->
+<script src="assets/js/projects.js"></script>
 
 
 
