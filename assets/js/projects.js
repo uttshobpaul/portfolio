@@ -23,37 +23,38 @@ document.addEventListener("DOMContentLoaded", () => {
         !previous ||
         !next
     ) {
-
         return;
-
     }
 
 
-    let currentIndex = 1;
+    /* ==========================================
+       CURRENT PROJECT
+    ========================================== */
+
+    let currentIndex = 0;
 
 
     /* ==========================================
-       UPDATE ACTIVE PROJECT
+       UPDATE PROJECT POSITION
     ========================================== */
 
-    function updateProjects(){
+    function updateProjects() {
 
         cards.forEach((card, index) => {
 
-            card.classList.remove("active");
-
-            if(index === currentIndex){
-
-                card.classList.add("active");
-
-            }
+            card.classList.toggle(
+                "active",
+                index === currentIndex
+            );
 
         });
 
 
-        /* Desktop positioning */
+        /* ==========================================
+           DESKTOP CENTER POSITION
+        ========================================== */
 
-        if(window.innerWidth > 900){
+        if (window.innerWidth > 900) {
 
             const cardWidth =
                 cards[0].offsetWidth;
@@ -63,14 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const carouselWidth =
                 track.parentElement.offsetWidth;
 
-
             const offset =
                 (carouselWidth / 2)
                 -
                 (cardWidth / 2)
                 -
-                (currentIndex * (cardWidth + gap));
-
+                (
+                    currentIndex *
+                    (cardWidth + gap)
+                );
 
             track.style.transform =
                 `translateX(${offset}px)`;
@@ -84,9 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
        NEXT PROJECT
     ========================================== */
 
-    next.addEventListener("click", () => {
+    function nextProject() {
 
-        if(currentIndex < cards.length - 1){
+        if (
+            currentIndex <
+            cards.length - 1
+        ) {
 
             currentIndex++;
 
@@ -94,16 +99,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-    });
+    }
 
 
     /* ==========================================
        PREVIOUS PROJECT
     ========================================== */
 
-    previous.addEventListener("click", () => {
+    function previousProject() {
 
-        if(currentIndex > 0){
+        if (currentIndex > 0) {
 
             currentIndex--;
 
@@ -111,22 +116,112 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-    });
+    }
 
 
     /* ==========================================
-       RESPONSIVE UPDATE
+       ARROW BUTTONS
     ========================================== */
 
-    window.addEventListener("resize", () => {
+    next.addEventListener(
+        "click",
+        nextProject
+    );
 
-        updateProjects();
 
-    });
+    previous.addEventListener(
+        "click",
+        previousProject
+    );
 
 
     /* ==========================================
-       INITIAL PROJECT
+       DESKTOP TRACKPAD / MOUSE WHEEL
+
+       Horizontal trackpad movement:
+
+       Swipe right  → previous project
+       Swipe left   → next project
+    ========================================== */
+
+    track.addEventListener(
+        "wheel",
+        (event) => {
+
+            /* Only desktop */
+
+            if (window.innerWidth <= 900) {
+                return;
+            }
+
+
+            /*
+               Trackpad horizontal movement
+               usually appears in deltaX.
+            */
+
+            const horizontal =
+                Math.abs(event.deltaX);
+
+
+            const vertical =
+                Math.abs(event.deltaY);
+
+
+            /*
+               Ignore normal vertical scrolling.
+
+               This prevents the project section
+               from hijacking normal page scrolling.
+            */
+
+            if (horizontal <= vertical) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            /*
+               Prevent multiple projects from
+               jumping during one swipe.
+            */
+
+            if (Math.abs(event.deltaX) < 5) {
+                return;
+            }
+
+
+            if (event.deltaX > 0) {
+
+                nextProject();
+
+            } else {
+
+                previousProject();
+
+            }
+
+        },
+        {
+            passive:false
+        }
+    );
+
+
+    /* ==========================================
+       RESIZE
+    ========================================== */
+
+    window.addEventListener(
+        "resize",
+        updateProjects
+    );
+
+
+    /* ==========================================
+       INITIALIZE
     ========================================== */
 
     updateProjects();

@@ -6,6 +6,10 @@
 
     padding:100px 8%;
 
+    width:100%;
+
+    box-sizing:border-box;
+
 }
 
 
@@ -19,15 +23,22 @@
 
     width:100%;
 
-    margin-top:60px;
+    max-width:1400px;
+
+    margin:60px auto 0;
 
     overflow:hidden;
+
+    box-sizing:border-box;
 
 }
 
 
 /* ==========================================
    PROJECT TRACK
+
+   JavaScript moves this track left/right
+   to keep the selected project centered.
 ========================================== */
 
 .projects-track{
@@ -36,8 +47,6 @@
 
     align-items:center;
 
-    justify-content:center;
-
     gap:25px;
 
     width:max-content;
@@ -45,6 +54,8 @@
     margin:0 auto;
 
     transition:transform .6s ease;
+
+    box-sizing:border-box;
 
 }
 
@@ -59,13 +70,21 @@
 
     width:650px;
 
-    display:grid;
+    height:600px;
 
-    grid-template-columns:230px 1fr;
+    max-width:650px;
+
+    box-sizing:border-box;
+
+    display:flex;
+
+    flex-direction:column;
 
     background:var(--surface);
 
     backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
 
     border-radius:22px;
 
@@ -75,7 +94,7 @@
 
     box-shadow:var(--shadow);
 
-    opacity:.55;
+    opacity:.45;
 
     transform:scale(.82);
 
@@ -87,11 +106,13 @@
 
         box-shadow .6s ease;
 
+    position:relative;
+
 }
 
 
 /* ==========================================
-   CENTER PROJECT
+   CENTER / ACTIVE PROJECT
 ========================================== */
 
 .project-card.active{
@@ -100,7 +121,9 @@
 
     transform:scale(1);
 
-    box-shadow:0 20px 45px rgba(0,174,239,.20);
+    box-shadow:
+
+        0 20px 45px rgba(0,174,239,.20);
 
     z-index:5;
 
@@ -108,65 +131,201 @@
 
 
 /* ==========================================
-   PROJECT IMAGE
+   PROJECT CONTENT
+
+   Entire card uses flex so the header,
+   scroll area and buttons stay separated.
 ========================================== */
 
-.project-image{
-
-    min-height:280px;
-
-    background:linear-gradient(
-
-        135deg,
-
-        #00AEEF,
-
-        #1B7DFF
-
-    );
+.project-content{
 
     display:flex;
 
-    align-items:center;
+    flex-direction:column;
 
-    justify-content:center;
+    height:100%;
 
-    text-align:center;
+    min-height:0;
 
-    padding:30px;
+    padding:35px;
 
-    font-size:25px;
-
-    font-weight:700;
+    box-sizing:border-box;
 
 }
 
 
 /* ==========================================
-   PROJECT CONTENT
+   PROJECT HEADER
+
+   Permanently visible
 ========================================== */
 
-.project-content{
+.project-header{
 
-    padding:35px;
+    flex:0 0 auto;
+
+    padding-bottom:22px;
+
+    border-bottom:1px solid var(--border);
 
 }
 
+
+/* ==========================================
+   PROJECT CATEGORY
+========================================== */
+
+.project-label{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+
+    margin:0 0 10px;
+
+}
+
+
+/* ==========================================
+   PROJECT NAME
+
+   Permanently visible
+========================================== */
 
 .project-content h3{
 
-    font-size:28px;
+    font-size:30px;
 
-    margin-bottom:18px;
+    line-height:1.25;
+
+    margin:0;
+
+    color:var(--text);
 
 }
 
 
-.project-content p{
+/* ==========================================
+   SCROLLABLE PROJECT INFORMATION
+
+   Only this section scrolls.
+========================================== */
+
+.project-scroll{
+
+    flex:1 1 auto;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:25px 12px 25px 0;
+
+    box-sizing:border-box;
+
+    scrollbar-width:thin;
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* ==========================================
+   PROJECT SCROLLBAR
+
+   Chrome / Edge / Safari
+========================================== */
+
+.project-scroll::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+
+.project-scroll::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+.project-scroll::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+
+.project-scroll::-webkit-scrollbar-thumb:hover{
+
+    background:#008fc7;
+
+}
+
+
+/* ==========================================
+   PROJECT DESCRIPTION
+========================================== */
+
+.project-description{
+
+    color:var(--text-secondary);
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin:0 0 28px;
+
+}
+
+
+/* ==========================================
+   PROJECT SECTION HEADINGS
+========================================== */
+
+.project-scroll h4{
+
+    color:var(--text);
+
+    font-size:17px;
+
+    margin:0 0 14px;
+
+}
+
+
+/* ==========================================
+   PROJECT FEATURES
+========================================== */
+
+.project-features{
+
+    margin:0 0 30px;
+
+    padding-left:22px;
 
     color:var(--text-secondary);
 
     line-height:1.8;
+
+}
+
+
+.project-features li{
+
+    margin-bottom:7px;
 
 }
 
@@ -177,18 +336,24 @@
 
 .project-tags{
 
-    margin:25px 0;
-
     display:flex;
+
+    flex-wrap:wrap;
 
     gap:10px;
 
-    flex-wrap:wrap;
+    margin:0 0 10px;
 
 }
 
 
 .project-tags span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     background:var(--surface-2);
 
@@ -200,26 +365,68 @@
 
     font-size:14px;
 
+    border:1px solid var(--border);
+
+    white-space:nowrap;
+
+}
+
+
+/* ==========================================
+   PROJECT BUTTON AREA
+
+   Permanently visible at bottom
+========================================== */
+
+.project-buttons{
+
+    flex:0 0 auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+
 }
 
 
 /* ==========================================
    PROJECT BUTTONS
+
+   Uses your existing .btn styles,
+   but keeps these buttons properly aligned.
 ========================================== */
 
-.project-buttons{
+.project-buttons .btn{
 
-    display:flex;
+    display:inline-flex;
 
-    gap:15px;
+    align-items:center;
 
-    flex-wrap:wrap;
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:10px 18px;
+
+    box-sizing:border-box;
+
+    text-decoration:none;
+
+    white-space:nowrap;
 
 }
 
 
 /* ==========================================
-   NAVIGATION ARROWS
+   PROJECT NAVIGATION ARROWS
 ========================================== */
 
 .project-arrow{
@@ -246,6 +453,8 @@
 
     font-weight:600;
 
+    line-height:1;
+
     display:flex;
 
     align-items:center;
@@ -256,21 +465,45 @@
 
     z-index:20;
 
-    box-shadow:0 8px 25px rgba(0,174,239,.30);
+    box-shadow:
 
-    transition:.3s ease;
+        0 8px 25px rgba(0,174,239,.30);
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease,
+
+        box-shadow .3s ease;
+
+    box-sizing:border-box;
 
 }
 
+
+/* ==========================================
+   ARROW HOVER
+========================================== */
 
 .project-arrow:hover{
 
     background:#008fc7;
 
+    color:#ffffff;
+
     transform:translateY(-50%) scale(1.08);
+
+    box-shadow:
+
+        0 12px 30px rgba(0,174,239,.40);
 
 }
 
+
+/* ==========================================
+   ARROW ACTIVE / CLICK
+========================================== */
 
 .project-arrow:active{
 
@@ -279,6 +512,10 @@
 }
 
 
+/* ==========================================
+   LEFT ARROW
+========================================== */
+
 .project-arrow-left{
 
     left:15px;
@@ -286,9 +523,84 @@
 }
 
 
+/* ==========================================
+   RIGHT ARROW
+========================================== */
+
 .project-arrow-right{
 
     right:15px;
+
+}
+
+
+/* ==========================================
+   DESKTOP - LARGE SCREEN
+========================================== */
+
+@media (min-width:1201px){
+
+    .project-card{
+
+        flex-basis:650px;
+
+        width:650px;
+
+        height:600px;
+
+    }
+
+}
+
+
+/* ==========================================
+   DESKTOP - MEDIUM SCREEN
+
+   Prevent cards from becoming too large
+   on smaller laptops.
+========================================== */
+
+@media (min-width:901px) and (max-width:1200px){
+
+    .projects{
+
+        padding-left:6%;
+
+        padding-right:6%;
+
+    }
+
+
+    .projects-carousel{
+
+        max-width:1100px;
+
+    }
+
+
+    .project-card{
+
+        flex-basis:600px;
+
+        width:600px;
+
+        height:580px;
+
+    }
+
+
+    .project-content{
+
+        padding:30px;
+
+    }
+
+
+    .project-content h3{
+
+        font-size:27px;
+
+    }
 
 }
 
@@ -301,35 +613,74 @@
 
     .projects{
 
+        width:100%;
+
         padding:80px 20px;
+
+        box-sizing:border-box;
+
+        overflow:hidden;
 
     }
 
 
     .projects-carousel{
 
-        overflow:hidden;
+        width:100%;
+
+        max-width:100%;
 
         margin-top:40px;
 
+        overflow:hidden;
+
+        box-sizing:border-box;
+
     }
 
+
+    /* ======================================
+       MOBILE PROJECT TRACK
+
+       Native horizontal scrolling allows:
+       - finger swipe
+       - trackpad
+       - touch scrolling
+    ====================================== */
 
     .projects-track{
 
         width:100%;
 
+        max-width:100%;
+
+        margin:0;
+
+        display:flex;
+
         justify-content:flex-start;
+
+        align-items:stretch;
 
         gap:18px;
 
         overflow-x:auto;
 
+        overflow-y:hidden;
+
+        padding:10px 5px 25px;
+
+        box-sizing:border-box;
+
         scroll-behavior:smooth;
+
+        scroll-snap-type:x mandatory;
+
+        -webkit-overflow-scrolling:touch;
 
         scrollbar-width:none;
 
-        padding:10px 5px 25px;
+        transform:none !important;
 
     }
 
@@ -341,20 +692,36 @@
     }
 
 
+    /* ======================================
+       MOBILE PROJECT CARD
+    ====================================== */
+
     .project-card{
 
-        flex:0 0 88%;
+        flex:0 0 calc(100vw - 60px);
 
-        width:88%;
+        width:calc(100vw - 60px);
 
-        grid-template-columns:1fr;
+        max-width:calc(100vw - 60px);
+
+        height:560px;
+
+        min-width:0;
 
         opacity:1;
 
         transform:scale(1);
 
+        scroll-snap-align:center;
+
+        box-sizing:border-box;
+
     }
 
+
+    /* ======================================
+       ACTIVE CARD ON MOBILE
+    ====================================== */
 
     .project-card.active{
 
@@ -363,18 +730,33 @@
     }
 
 
-    .project-image{
-
-        min-height:180px;
-
-        font-size:23px;
-
-    }
-
+    /* ======================================
+       MOBILE CONTENT
+    ====================================== */
 
     .project-content{
 
         padding:25px;
+
+        min-width:0;
+
+    }
+
+
+    /* ======================================
+       MOBILE HEADER
+    ====================================== */
+
+    .project-header{
+
+        padding-bottom:18px;
+
+    }
+
+
+    .project-label{
+
+        font-size:12px;
 
     }
 
@@ -383,17 +765,100 @@
 
         font-size:24px;
 
+        line-height:1.3;
+
     }
 
 
-    .project-content p{
+    /* ======================================
+       MOBILE SCROLL AREA
+    ====================================== */
+
+    .project-scroll{
+
+        padding-top:20px;
+
+        padding-right:8px;
+
+    }
+
+
+    .project-description{
 
         font-size:15px;
 
+        line-height:1.7;
+
     }
 
 
-    /* Hide arrows on mobile */
+    .project-scroll h4{
+
+        font-size:16px;
+
+    }
+
+
+    .project-features{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+
+    /* ======================================
+       MOBILE TAGS
+    ====================================== */
+
+    .project-tags{
+
+        gap:8px;
+
+    }
+
+
+    .project-tags span{
+
+        padding:7px 12px;
+
+        font-size:13px;
+
+    }
+
+
+    /* ======================================
+       MOBILE BUTTONS
+
+       Always remain at bottom.
+    ====================================== */
+
+    .project-buttons{
+
+        gap:8px;
+
+        padding-top:15px;
+
+    }
+
+
+    .project-buttons .btn{
+
+        min-height:40px;
+
+        padding:9px 13px;
+
+        font-size:13px;
+
+    }
+
+
+    /* ======================================
+       HIDE DESKTOP ARROWS ON MOBILE
+
+       User uses swipe / trackpad.
+    ====================================== */
 
     .project-arrow{
 
@@ -417,20 +882,35 @@
     }
 
 
-    .project-card{
+    .projects-carousel{
 
-        flex:0 0 92%;
-
-        width:92%;
+        margin-top:35px;
 
     }
 
 
-    .project-image{
+    .projects-track{
 
-        min-height:150px;
+        padding-left:3px;
 
-        font-size:21px;
+        padding-right:3px;
+
+        gap:15px;
+
+    }
+
+
+    .project-card{
+
+        flex-basis:calc(100vw - 40px);
+
+        width:calc(100vw - 40px);
+
+        max-width:calc(100vw - 40px);
+
+        height:540px;
+
+        border-radius:18px;
 
     }
 
@@ -449,9 +929,99 @@
     }
 
 
-    .project-content p{
+    .project-description{
 
         font-size:14px;
+
+    }
+
+
+    .project-features{
+
+        font-size:14px;
+
+    }
+
+
+    .project-tags span{
+
+        padding:7px 11px;
+
+        font-size:12px;
+
+    }
+
+
+    .project-buttons{
+
+        gap:7px;
+
+    }
+
+
+    .project-buttons .btn{
+
+        padding:8px 11px;
+
+        font-size:12px;
+
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+
+@media (max-width:380px){
+
+    .projects{
+
+        padding-left:12px;
+
+        padding-right:12px;
+
+    }
+
+
+    .project-card{
+
+        flex-basis:calc(100vw - 30px);
+
+        width:calc(100vw - 30px);
+
+        max-width:calc(100vw - 30px);
+
+    }
+
+
+    .project-content{
+
+        padding:19px;
+
+    }
+
+
+    .project-content h3{
+
+        font-size:20px;
+
+    }
+
+
+    .project-buttons{
+
+        gap:5px;
+
+    }
+
+
+    .project-buttons .btn{
+
+        padding:8px 9px;
+
+        font-size:11px;
 
     }
 
