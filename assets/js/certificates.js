@@ -29,11 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    /* ==========================================
+       CURRENT CERTIFICATE
+    ========================================== */
+
     let currentIndex = 0;
 
 
     /* ==========================================
        CENTER CERTIFICATE
+       
+       IMPORTANT:
+       We do NOT use scrollIntoView().
+       scrollIntoView() can move the whole
+       webpage vertically.
+
+       This function changes ONLY scrollLeft.
     ========================================== */
 
     function centerCertificate(index, smooth = true) {
@@ -45,20 +56,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /*
-           Tell the browser that the selected
-           certificate should be placed in the
-           horizontal center.
-        */
+        const trackWidth =
+            track.clientWidth;
 
-        card.scrollIntoView({
-            behavior: smooth ? "smooth" : "auto",
-            block: "nearest",
-            inline: "center"
+        const cardWidth =
+            card.offsetWidth;
+
+
+        const targetScrollLeft =
+            card.offsetLeft
+            -
+            (
+                (trackWidth - cardWidth) / 2
+            );
+
+
+        track.scrollTo({
+
+            left: Math.max(
+                0,
+                targetScrollLeft
+            ),
+
+            behavior:
+                smooth
+                ? "smooth"
+                : "auto"
+
         });
 
 
         updateActive(index);
+
     }
 
 
@@ -141,7 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const trackCenter =
                 trackRect.left +
-                (trackRect.width / 2);
+                (
+                    trackRect.width / 2
+                );
 
 
             let closestIndex = 0;
@@ -158,7 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const cardCenter =
                     cardRect.left +
-                    (cardRect.width / 2);
+                    (
+                        cardRect.width / 2
+                    );
 
 
                 const distance =
@@ -199,6 +232,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ==========================================
        INITIAL POSITION
+       
+       IMPORTANT:
+       Only horizontal scrolling happens here.
+       The page will remain at HOME.
     ========================================== */
 
     setTimeout(() => {
